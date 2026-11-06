@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ENRCHIDINE Masy Abdallah, Projets</title>
+<meta name="description" content="Projets de ENRCHIDINE Masy Abdallah, étudiant en Comptabilité, Contrôle et Audit à l'IST-D d'Antsiranana : digitalisation de la comptabilité, suivi des stocks du CHU, rapprochement bancaire et projets locaux.">
+<meta property="og:title" content="ENRCHIDINE Masy Abdallah, Projets">
+<meta property="og:description" content="Étudiant en CCA à l'IST-D d'Antsiranana. Découvre mes projets académiques, d'entreprise et communautaires.">
+<meta property="og:type" content="website">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: en-tête sobre, bandeau de filtres, grille de projets, étude de cas mise en avant, bloc compétences */
+:root{
+  --bg:#f2f5f7; --surface:#ffffff; --fg:#0c1b27; --muted:#4f6272; --line:#d6dee5;
+  --accent:#0b7a86; --accent-ink:#ffffff; --accent-soft:#d9eef0;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"DM Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0a141c; --surface:#112230; --fg:#e8f0f5; --muted:#9db1c0; --line:#23394a;
+  --accent:#3fc1cf; --accent-ink:#06222a; --accent-soft:#12363f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0a141c; --surface:#112230; --fg:#e8f0f5; --muted:#9db1c0; --line:#23394a;
+  --accent:#3fc1cf; --accent-ink:#06222a; --accent-soft:#12363f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+.wrap{max-width:1080px;margin:0 auto}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:20px;flex-wrap:wrap}
+.brand{font-family:var(--f-display);font-weight:700;font-size:1.05rem;letter-spacing:-.01em}
+nav{display:flex;gap:18px;font-family:var(--f-mono);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--accent)}
+.hero{padding-block:48px 40px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:end;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:0 0 14px}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.2rem,6.2vw,4.4rem);line-height:1.02;letter-spacing:-.03em;margin:0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{color:var(--muted);font-size:1.08rem;max-width:46ch;margin:0}
+.facts{display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:.95rem}
+.facts li{display:flex;gap:12px;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:8px}
+.facts span:first-child{font-family:var(--f-mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.facts span:last-child{text-align:right}
+section{padding-block:48px 0}
+h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;margin:0 0 6px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 22px;max-width:60ch}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{font:500 .85rem var(--f-body);padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card[hidden]{display:none}
+.tag{align-self:flex-start;font-family:var(--f-mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;background:var(--accent-soft);color:var(--accent);padding:3px 9px;border-radius:6px}
+.card h3{font-family:var(--f-display);font-size:1.25rem;line-height:1.2;margin:0;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.card ul{margin:0;padding-left:18px;font-size:.92rem;color:var(--muted)}
+.meta{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.74rem;color:var(--muted);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.feature{background:var(--fg);color:var(--bg);border-radius:18px;padding:clamp(22px,4vw,40px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.feature h2{color:inherit}
+.feature p{margin:0 0 12px;opacity:.85}
+.feature .eyebrow{color:var(--accent)}
+.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-content:start}
+.metric{border:1px solid color-mix(in srgb,var(--bg) 25%,transparent);border-radius:12px;padding:14px}
+.metric b{display:block;font-family:var(--f-display);font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
+.metric span{font-size:.85rem;opacity:.8}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skills span{font-family:var(--f-mono);font-size:.8rem;border:1px solid var(--line);background:var(--surface);padding:6px 12px;border-radius:8px}
+footer{padding-block:48px max(32px,env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.hero,.feature{grid-template-columns:minmax(0,1fr)}.hero{gap:24px;padding-block:32px}}
+@media (prefers-reduced-motion:no-preference){.card{transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:var(--accent)}}
+body{margin:0}[hidden]{display:none!important}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="brand">ENRCHIDINE Masy Abdallah</span>
+    <nav aria-label="Navigation"><a href="#projets">Projets</a><a href="#etude">Étude phare</a><a href="#outils">Outils</a></nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Comptabilité, Contrôle et Audit</p>
+      <h1>Des projets <em>concrets</em>, du terrain à Antsiranana.</h1>
+    </div>
+    <div>
+      <p class="lede">Je suis ENRCHIDINE Masy Abdallah, étudiant en CCA à l'IST-D. Je travaille sur des cas réels : entreprises, hôpital, école et quartier. Voici ce que j'ai étudié, préparé et mené.</p>
+      <ul class="facts" style="margin-top:20px">
+        <li><span>Formation</span><span>CCA, IST-D</span></li>
+        <li><span>Ville</span><span>Antsiranana (Diego-Suarez)</span></li>
+        <li><span>Année</span><span>2025–2026</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="projets">
+    <h2>Mes projets</h2>
+    <p class="sub">Filtre par type pour voir ce qui t'intéresse.</p>
+    <div class="filters" role="group" aria-label="Filtrer les projets">
+      <button class="chip" data-f="all" aria-pressed="true" type="button">Tous</button>
+      <button class="chip" data-f="acad" aria-pressed="false" type="button">Académique</button>
+      <button class="chip" data-f="ent" aria-pressed="false" type="button">Entreprise</button>
+      <button class="chip" data-f="com" aria-pressed="false" type="button">Communautaire</button>
+    </div>
+    <div class="grid" id="grid">
+      <article class="card" data-c="acad">
+        <span class="tag">Académique</span>
+        <h3>La Digitalisation de la Comptabilité</h3>
+        <p>Projet tutoré de CCA mené en équipe, avec pour terrain une PME d'Antsiranana.</p>
+        <ul><li>Rapport académique de 30 pages</li><li>Présentation de 12 diapositives</li><li>Chronogramme sur huit semaines, questionnaire et graphiques statistiques</li></ul>
+        <div class="meta"><span>IST-D</span><span>2025–2026</span></div>
+      </article>
+      <article class="card" data-c="acad">
+        <span class="tag">Académique</span>
+        <h3>Informatisation du suivi des stocks</h3>
+        <p>Cas du CHU Place Kabary. Étudier comment un outil informatique améliorerait le suivi des articles du magasin.</p>
+        <ul><li>Suivi manuel qui complique le contrôle des quantités</li><li>Solution adaptée aux moyens d'un établissement public</li><li>Cahier des charges en cours de rédaction</li></ul>
+        <div class="meta"><span>Mémoire</span><span>En cours</span></div>
+      </article>
+      <article class="card" data-c="ent">
+        <span class="tag">Entreprise</span>
+        <h3>Fiabiliser le rapprochement bancaire</h3>
+        <p>Étude chez NORMAD COMPANY SARLU, à Vohémar : du relevé bancaire à la validation comptable.</p>
+        <ul><li>Erreurs de saisie, doublons, retards de relevés</li><li>Excel utilisé malgré la présence de SAGE i7</li></ul>
+        <div class="meta"><span>NORMAD COMPANY</span><span>Vohémar</span></div>
+      </article>
+      <article class="card" data-c="com">
+        <span class="tag">Communautaire</span>
+        <h3>Lazare Mivoatra</h3>
+        <p>Projet de développement local à Lazaret Sud (Antsiranana) pour la réhabilitation durable des routes.</p>
+        <ul><li>Encourager les habitants à mieux entretenir les infrastructures</li><li>Mon rôle : responsable des ressources humaines</li></ul>
+        <div class="meta"><span>Lazaret Sud</span><span>Travail de groupe</span></div>
+      </article>
+      <article class="card" data-c="com">
+        <span class="tag">Communautaire</span>
+        <h3>Demande de subvention, EPP Antanamariazy</h3>
+        <p>Dossier préparé pour la réparation des salles de classe et des tables de l'école d'Ambilobe.</p>
+        <ul><li>Adressé à la Commune urbaine d'Ambilobe</li></ul>
+        <div class="meta"><span>Ambilobe</span><span>Dossier de subvention</span></div>
+      </article>
+      <article class="card" data-c="acad">
+        <span class="tag">Académique</span>
+        <h3>Analyses financières et études de terrain</h3>
+        <p>Cas pratiques menés selon les normes OHADA et sur des organisations locales.</p>
+        <ul><li>RAVINALA AGRO-INDUSTRIE SA : amortissement d'emprunt, CAF, tableau de financement, VAN</li><li>Baobab Banque Antsiranana : marketing spatial et phygital, axes stratégiques</li></ul>
+        <div class="meta"><span>OHADA</span><span>Rapports et présentations</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="etude">
+    <div class="feature">
+      <div>
+        <p class="eyebrow">Étude phare</p>
+        <h2>La Digitalisation de la Comptabilité</h2>
+        <p>Mon projet tutoré le plus long : comprendre comment une PME d'Antsiranana peut passer de la tenue manuelle à des outils numériques, avec un livrable complet à chaque étape.</p>
+        <p>Réalisé en équipe sous la direction de Dr. Razafindradany.</p>
+      </div>
+      <div class="metrics">
+        <div class="metric"><b>30</b><span>pages de rapport</span></div>
+        <div class="metric"><b>12</b><span>diapositives</span></div>
+        <div class="metric"><b>8</b><span>semaines de chronogramme</span></div>
+        <div class="metric"><b>1</b><span>PME étudiée</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="outils">
+    <h2>Outils utilisés</h2>
+    <p class="sub">Ce que j'utilise pour produire mes rapports, analyses et présentations.</p>
+    <div class="skills"><span>Word</span><span>Excel</span><span>PowerPoint</span><span>Odoo</span><span>MiKTeX</span><span>VS Code</span><span>C++</span></div>
+  </section>
+
+  <footer><span>ENRCHIDINE Masy Abdallah · IST-D, Antsiranana</span><span>Site mis à jour le 6 novembre 2026</span></footer>
+</div>
+
+<script>
+(function(){
+  var chips=document.querySelectorAll('.chip'),cards=document.querySelectorAll('.card');
+  chips.forEach(function(ch){ch.addEventListener('click',function(){
+    var f=ch.getAttribute('data-f');
+    chips.forEach(function(c){c.setAttribute('aria-pressed',c===ch?'true':'false')});
+    cards.forEach(function(cd){cd.hidden=!(f==='all'||cd.getAttribute('data-c')===f)});
+  })});
+})();
+</script>
+
+</body>
+</html>
